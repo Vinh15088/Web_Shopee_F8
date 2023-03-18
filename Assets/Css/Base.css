@@ -22,8 +22,10 @@ html {
     box-sizing: border-box;
 }
 
+/* Respansive */
+
 .grid {
-    width: 1200px;
+    width: 1350px;
     max-width: 100%;
     margin: 0 auto;
 }
@@ -35,6 +37,22 @@ html {
 .grid__row {
     display: flex;
     flex-wrap: wrap;
+    margin-left: -12px;
+    margin-right: -12px;
+}
+
+/* Test */
+
+.grid__column-2 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 16.6667%;
+}
+
+.grid__column-10 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 83.333%;
 }
 
 /* Animation */
@@ -98,7 +116,7 @@ html {
     outline: none;
     cursor: pointer;
     color: var(--text-color);
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
 }
@@ -116,4 +134,79 @@ html {
 .btn.btn--primary {
     background-color: var(--primary-color);
     color: var(--while-color);
+}
+
+/* Seclection */
+.select-input {
+    height: 34px;
+    padding: 0 12px;
+    min-width: 200px;
+    border-radius: 2px;
+    background-color: var(--while-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #555555;
+    position: relative;
+}
+
+.select-input:hover .select-input__list {
+    display: block;
+}
+.seclect-input__label {
+    font-size: 1rem;
+    
+}
+
+.select-input-icon {
+    font-size: 1rem;
+    color: rgb(131, 131, 131);
+    /* margin: 0 16px 0 8px; */
+    position: relative;
+    top: 1px;
+}
+.select-input__list {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 25px;
+    border-radius: 2px;
+    background-color: #fff;
+    
+}
+
+.select-input__item {
+
+}
+
+.select-input__link {
+
+}
+
+.select-input__list {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 35px;
+    border-radius: 2px;
+    background-color: #fff;
+    list-style: none;
+    padding: 8px 16px;
+    display: none;
+}
+
+.select-input__item {
+
+}
+
+.select-input__link {
+    font-size: 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+    padding: 4px 0;
+}
+
+.select-input__link:hover{
+    color: var(--primary-color);
 }
