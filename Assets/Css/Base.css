@@ -155,6 +155,7 @@ html {
     justify-content: space-between;
     color: #555555;
     position: relative;
+    /* z-index: 1; */
 }
 
 .select-input:hover .select-input__list {
@@ -172,23 +173,6 @@ html {
     position: relative;
     top: 1px;
 }
-.select-input__list {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 25px;
-    border-radius: 2px;
-    background-color: #fff;
-    
-}
-
-.select-input__item {
-
-}
-
-.select-input__link {
-
-}
 
 .select-input__list {
     position: absolute;
@@ -200,6 +184,7 @@ html {
     list-style: none;
     padding: 8px 16px;
     display: none;
+    z-index: 1;
 }
 
 .select-input__item {
@@ -216,4 +201,44 @@ html {
 
 .select-input__link:hover{
     color: var(--primary-color);
+}
+
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.pagination-item {
+    margin: 0 12px;
+}
+
+.pagination-item--active .pagination-item__link {
+    color: var(--while-color);
+    background-color: var(--primary-color);
+}
+
+.pagination-item--active .pagination-item__link:hover {
+    background-color: #ed5c3f;
+}
+
+.pagination-item__link {
+    --height: 30px;
+    display: block;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 350;
+    color: #939393;
+    min-width: 40px;
+    height: var(--height);
+    text-align: center;
+    line-height: var(--height);
+    border-radius: 2px;
+}
+
+.pagination-item__icon {
+
 }
